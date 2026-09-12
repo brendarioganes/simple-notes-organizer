@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app'
 import { getDatabase } from 'firebase/database'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDgFB_b_6N-E8YBCG8X0hhKcWW8Ixy_aFg",
-  authDomain: "simple-notes-organizer.firebaseapp.com",
-  databaseURL: "https://simple-notes-organizer-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "simple-notes-organizer",
-  storageBucket: "simple-notes-organizer.firebasestorage.app",
-  messagingSenderId: "453554904026",
-  appId: "1:453554904026:web:08d869b97c17d70794fee3",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 }
 
 const app = initializeApp(firebaseConfig)
